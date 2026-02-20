@@ -51,7 +51,7 @@ const StoryManager = {
     RenderManager.renderArt(art, artPanel);
 
     // Start typing text
-    this.typeText(scene.text, textPanel, () => {
+    this.typeText(scene.text, textPanel, async () => {
       // Typing finished → add cursor
       let cursor = document.createElement("span");
       cursor.id = "terminal-cursor";
@@ -81,6 +81,17 @@ const StoryManager = {
           this.enableKeyboard();
         }
       }
+
+      else {
+        if (!scene.nextId) return;
+
+        const delay = scene.timeout || 1000; // default 1s
+
+        setTimeout(() => {
+          this.resolveChoice({ next: scene.nextId });
+        }, delay);
+      }
+
     });
   },
 
