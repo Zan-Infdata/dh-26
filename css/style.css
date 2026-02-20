@@ -1,11 +1,13 @@
 body {
   margin: 0;
-  font-family: 'Consolas', monospace;
   height: 100vh;
   background: url('windows_home.jpg') no-repeat center center;
   background-size: cover;
   position: relative;
   overflow: hidden;
+  font-family: "Source Code Pro", monospace;
+  font-weight: 300;
+  font-size: 13pt;
 }
 
 /* Window container */
