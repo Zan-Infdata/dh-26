@@ -66,7 +66,7 @@ body {
   display: flex;
   flex-direction: column; /* stack top to bottom */
   overflow: hidden;
-  background: rgba(0,0,0,0.85);
+  background: rgba(0,0,0,0.9);
   border-top: 1px solid #444;
   color: #00ff00;
 }
@@ -86,7 +86,7 @@ body {
   align-items: center;       /* vertical center */
   white-space: pre;
   overflow-y: auto;
-  color: #0ff;
+  color: #00ff00;
   border-top: 1px solid #444; /* optional separator line */
   text-align: center;         /* fallback horizontal center for text */
 }
@@ -103,11 +103,5 @@ body {
   50% { opacity: 0; }
 }
 .choice {
-  color: #ff0;
-  cursor: pointer;
   margin-top: 5px;
-}
-
-.choice:hover {
-  text-decoration: underline;
 }

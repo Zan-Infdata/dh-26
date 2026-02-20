@@ -7,6 +7,9 @@ const StoryManager = {
 
   TypingSound: null,
 
+  selectedIndex: 0,
+  currentChoices: [],
+
   initSound() {
     TypingSound = document.getElementById("typing-sound");
     TypingSound.volume = 0.05;
@@ -21,6 +24,8 @@ const StoryManager = {
 
   async goToScene(sceneId) {
     this.history.push(sceneId);
+    
+    document.removeEventListener("keydown", this.keyHandler);
 
     const scene = await Loader.loadScene(sceneId);
     const art = scene.artId ? await Loader.loadArt(scene.artId) : null;
@@ -48,13 +53,66 @@ const StoryManager = {
 
       // Render choices
       if (scene.choices && scene.choices.length) {
-        scene.choices.forEach((choice, index) => {
-          const div = document.createElement("div");
-          div.className = "choice";
-          div.textContent = `${index + 1}) ${choice.text}`;
-          div.onclick = () => this.resolveChoice(choice);
-          textPanel.appendChild(div);
-        });
+        this.currentChoices = scene.choices || [];
+        this.selectedIndex = 0;
+
+        if (this.currentChoices.length) {
+          this.currentChoices.forEach((choice, index) => {
+            const div = document.createElement("div");
+            div.className = "choice";
+            div.dataset.index = index;
+            textPanel.appendChild(div);
+          });
+
+          this.updateSelection();
+          this.enableKeyboard();
+        }
+      }
+    });
+  },
+
+  enableKeyboard() {
+    this.keyHandler = (e) => {
+      if (!this.currentChoices.length) return;
+
+      if (e.key === "ArrowDown") {
+        e.preventDefault();
+        this.selectedIndex =
+          (this.selectedIndex + 1) % this.currentChoices.length;
+        this.updateSelection();
+      }
+
+      if (e.key === "ArrowUp") {
+        e.preventDefault();
+        this.selectedIndex =
+          (this.selectedIndex - 1 + this.currentChoices.length) %
+          this.currentChoices.length;
+        this.updateSelection();
+      }
+
+      if (e.key === "Enter") {
+        e.preventDefault();
+        const choice = this.currentChoices[this.selectedIndex];
+        document.removeEventListener("keydown", this.keyHandler);
+        this.resolveChoice(choice);
+      }
+    };
+
+    document.addEventListener("keydown", this.keyHandler);
+  },
+
+  updateSelection() {
+    const elements = document.querySelectorAll(".choice");
+
+    elements.forEach((el, i) => {
+      const text = this.currentChoices[i].text;
+
+      if (i === this.selectedIndex) {
+        el.innerHTML = `● ${text}`;
+        el.style.color = "#ffffff";
+      } else {
+        el.innerHTML = `○ ${text}`;
+        el.style.color = "#ff0";
       }
     });
   },
