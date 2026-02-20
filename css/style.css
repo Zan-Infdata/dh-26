@@ -7,7 +7,7 @@ body {
   overflow: hidden;
   font-family: "Source Code Pro", monospace;
   font-weight: 300;
-  font-size: 13pt;
+  font-size: 14pt;
 }
 
 body::before {
@@ -84,7 +84,7 @@ body::before {
 }
 
 #text-panel {
-  flex: 1;
+  flex: 3;
   padding: 20px;
   overflow-y: auto;
   color: #00ff00;
@@ -92,7 +92,7 @@ body::before {
 
 /* Art panel */
 #art-panel {
-  flex: 3;
+  flex: 5;
   display: flex;             /* use flexbox for centering */
   justify-content: center;   /* horizontal center */
   align-items: center;       /* vertical center */
