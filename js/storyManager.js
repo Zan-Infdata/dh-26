@@ -63,6 +63,11 @@ const StoryManager = {
             const div = document.createElement("div");
             div.className = "choice";
             div.dataset.index = index;
+            div.onclick = () => {
+              this.selectedIndex = index;
+              this.updateSelection();
+              this.resolveChoice(choice);
+            };
             textPanel.appendChild(div);
           });
 

@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Team Odyssey Terminal Adventure</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
@@ -35,11 +36,20 @@
             StoryManager.initSound();
             StoryManager.start("node1", 15);
             document.removeEventListener("keydown", handleStart);
+            document.removeEventListener("click", handleStartClick);
         }
+    }
+    function handleStartClick(e) {
+            StoryManager.initSound();
+            StoryManager.start("node1", 15);
+            
+            document.removeEventListener("keydown", handleStart);
+            document.removeEventListener("click", handleStartClick);
     }
     RenderManager.setDelay(300);
 
     document.addEventListener("keydown", handleStart);
+    document.addEventListener("click", handleStartClick);
   </script>
 </body>
 </html>
