@@ -92,7 +92,7 @@ body::before {
 
 /* Art panel */
 #art-panel {
-  flex: 3;
+  flex: 2;
   display: flex;             /* use flexbox for centering */
   justify-content: center;   /* horizontal center */
   align-items: center;       /* vertical center */
