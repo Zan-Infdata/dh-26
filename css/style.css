@@ -10,6 +10,17 @@ body {
   font-size: 13pt;
 }
 
+body::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: url('windows_home.jpg') no-repeat center center;
+  background-size: cover;
+  transform: scale(1.05); /* prevents visible edge clipping */
+  z-index: -1;
+  filter: blur(3px);
+}
+
 /* Window container */
 #window {
   border-radius: 12px;
