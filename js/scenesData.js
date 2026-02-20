@@ -536,7 +536,7 @@ const ScenesData = {
 "swap_team": {
     "text": "Ok I'll let it slide. But people won't like you if you do this to them. So...\n",
     "nextId": "51",
-    "timeout": 1300,
+    "timeout": 2000,
   },
 
 "52.2": {
@@ -662,7 +662,7 @@ const ScenesData = {
 "docker_fail_1": {
     "text": "Because you are a Data scientist? I don't know ask the professor... Anyway\n",
     "nextId": "docker_fail",
-    "timeout": 1500,
+    "timeout": 2000,
   },
 
 "docker_fail": {
@@ -686,7 +686,7 @@ const ScenesData = {
 "64": {
     "text": "Easy there cowboy\n",
     "nextId": "65",
-    "timeout": 800,
+    "timeout": 1200,
   },
 
   
@@ -718,13 +718,13 @@ const ScenesData = {
 "68": {
   "text": "So... LaTeX\n",
     "nextId": "69",
-    "timeout": 800,
+    "timeout": 1000,
 },
   
 "69": {
   "text": "You open Overleaf and start editing the template the professor gave you. Progress is good and having no teammates that would get in your way is great.\n",
     "nextId": "70",
-    "timeout": 3300,
+    "timeout": 4000,
 },
   
 "70": {
@@ -747,7 +747,7 @@ const ScenesData = {
 "72": {
   "text": "Perfect choice! ggplot is the best!\n",
     "nextId": "74",
-    "timeout": 1000,
+    "timeout": 1300,
 },
   
 "73": {
@@ -804,13 +804,13 @@ const ScenesData = {
 "mse": {
   "text": "MSE?\n",
     "nextId": "mse.1",
-    "timeout": 800,
+    "timeout": 1000,
 },
 
 "mse.1": {
   "text": "And what exactly are you gonna do with MSE?\n",
     "nextId": "mse.2",
-    "timeout": 1500,
+    "timeout": 1800,
 },
 
 "mse.2": {
@@ -824,7 +824,7 @@ const ScenesData = {
 "77": {
   "text": "Exactly!\n",
     "nextId": "78",
-    "timeout": 500,
+    "timeout": 1000,
 },
 
   
@@ -846,7 +846,7 @@ const ScenesData = {
 "80": {
   "text": "Ofcourse there is a defense! So on you present all of the findings. And Erik asks you a question:\n",
     "nextId": "81",
-    "timeout": 2500,
+    "timeout": 3000,
 },
 
 
@@ -881,13 +881,13 @@ const ScenesData = {
 "85": {
   "text": "Thanks for playing all the way through! We hope you had fun!\n",
     "nextId": "86",
-    "timeout": 1000,
+    "timeout": 3000,
 },
 
 "86": {
   "text": "Team SINJI DELFINI\n",
   "choices": [
-    { "text": "Back to begining", "next": "node2" },
+    { "text": "Back to the begining", "next": "node2" },
   ]
 },
   
