@@ -1,0 +1,111 @@
+body {
+  margin: 0;
+  font-family: 'Consolas', monospace;
+  height: 100vh;
+  background: url('windows_home.jpg') no-repeat center center;
+  background-size: cover;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Window container */
+#window {
+  border-radius: 12px;
+  width: 70%;
+  max-width: 900px;
+  height: 70%;
+  margin: 50px auto;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+  background: #f3f3f3;
+  display: flex;
+  flex-direction: column;
+  font-family: 'Consolas', monospace;
+}
+
+/* Title bar */
+#title-bar {
+  height: 30px;
+  background: linear-gradient(to bottom, #e0e0e0, #64A2D8);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 10px;
+  color: #000;
+  font-weight: bold;
+  user-select: none;
+  cursor: default;
+  border-bottom: 1px solid #aaa;
+}
+
+/* Window controls */
+#window-controls {
+  display: flex;
+  gap: 6px;
+}
+
+.control {
+  width: 14px;
+  height: 14px;
+  border-radius: 5%;
+  cursor: pointer;
+  border: 1px solid rgba(0,0,0,0.2);
+}
+
+.control.minimize { background: #395C7C; }
+.control.maximize { background: #395C7C; }
+.control.close    { background: #E35F5F; }
+
+.control:hover { opacity: 0.7; }
+
+/* Terminal content stacked vertically */
+#terminal {
+  flex: 1;
+  display: flex;
+  flex-direction: column; /* stack top to bottom */
+  overflow: hidden;
+  background: rgba(0,0,0,0.85);
+  border-top: 1px solid #444;
+  color: #00ff00;
+}
+
+#text-panel {
+  flex: 1;
+  padding: 20px;
+  overflow-y: auto;
+  color: #00ff00;
+}
+
+/* Art panel */
+#art-panel {
+  flex: 3;
+  display: flex;             /* use flexbox for centering */
+  justify-content: center;   /* horizontal center */
+  align-items: center;       /* vertical center */
+  white-space: pre;
+  overflow-y: auto;
+  color: #0ff;
+  border-top: 1px solid #444; /* optional separator line */
+  text-align: center;         /* fallback horizontal center for text */
+}
+
+/* Cursor */
+.cursor {
+  display: inline-block;
+  width: 10px;
+  background-color: #00ff00;
+  animation: blink 1s step-start infinite;
+}
+
+@keyframes blink {
+  50% { opacity: 0; }
+}
+.choice {
+  color: #ff0;
+  cursor: pointer;
+  margin-top: 5px;
+}
+
+.choice:hover {
+  text-decoration: underline;
+}

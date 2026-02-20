@@ -1,0 +1,10 @@
+{
+  "id": "ignored_laptop",
+  "text": "You ignored the laptop. Later you regret not opening it.\n",
+  "choices": [
+    {
+      "text": "Continue",
+      "next": "end_missed"
+    }
+  ]
+}

@@ -1,0 +1,9 @@
+{
+  "id": "intro",
+  "text": "Welcome to Team Odyssey's adventure! Your journey begins now.\n",
+  "artId": "intro_art",
+  "choices": [
+    { "text": "Start journey", "next": "first_challenge" },
+    { "text": "Quit", "next": "end_missed" }
+  ]
+}

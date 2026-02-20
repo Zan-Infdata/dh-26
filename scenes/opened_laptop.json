@@ -1,0 +1,15 @@
+{
+  "id": "opened_laptop",
+  "text": "You find a secret code snippet inside the laptop. Do you take it?\n",
+  "choices": [
+    {
+      "text": "Take the code",
+      "next": "end_victory",
+      "flag": "has_code"
+    },
+    {
+      "text": "Leave it",
+      "next": "end_missed"
+    }
+  ]
+}

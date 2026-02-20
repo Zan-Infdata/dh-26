@@ -1,0 +1,15 @@
+{
+  "id": "first_challenge",
+  "text": "You find a mysterious laptop on your desk. Do you open it?\n",
+  "artId": "first_challenge_art",
+  "choices": [
+    {
+      "text": "Open the laptop",
+      "next": "opened_laptop"
+    },
+    {
+      "text": "Ignore it",
+      "next": "ignored_laptop"
+    }
+  ]
+}
