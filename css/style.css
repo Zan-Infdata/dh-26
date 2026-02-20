@@ -99,7 +99,6 @@ body::before {
   white-space: pre;
   overflow-y: auto;
   color: #00ff00;
-  border-top: 1px solid #444; /* optional separator line */
   text-align: center;         /* fallback horizontal center for text */
 }
 

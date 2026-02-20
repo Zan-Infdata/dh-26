@@ -6,6 +6,8 @@ const StoryManager = {
   typingSpeed: 30, // default ms per character
 
   TypingSound: null,
+  Beep1Sound: null,
+  Beep2Sound: null,
 
   selectedIndex: 0,
   currentChoices: [],
@@ -13,6 +15,10 @@ const StoryManager = {
   initSound() {
     TypingSound = document.getElementById("typing-sound");
     TypingSound.volume = 0.05;
+    Beep1Sound = document.getElementById("beep1");
+    TypingSound.volume = 0.1;
+    Beep2Sound = document.getElementById("beep2");
+    TypingSound.volume = 0.1;
   },
 
   async start(sceneId, typingSpeed = 30) {
@@ -109,6 +115,10 @@ const StoryManager = {
   },
 
   updateSelection() {
+
+    const sound = Beep1Sound.cloneNode();
+    sound.play().catch(() => {});
+
     const elements = document.querySelectorAll(".choice");
 
     elements.forEach((el, i) => {
@@ -155,6 +165,9 @@ const StoryManager = {
     } else {
       nextId = choice.next;
     }
+
+    const sound = Beep2Sound.cloneNode();
+    sound.play().catch(() => {});
 
     if (nextId) await this.goToScene(nextId);
   }
