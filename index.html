@@ -27,16 +27,17 @@
   <script src="js/scenesData.js"></script>
   <script src="js/loader.js"></script>
   <script src="js/storyManager.js"></script>
+  <script src="js/renderManager.js"></script>
   <script>
 
     function handleStart(e) {
-        console.log(e.key);
         if (e.key === "Enter") {
             StoryManager.initSound();
             StoryManager.start("node1", 25);
             document.removeEventListener("keydown", handleStart);
         }
     }
+    RenderManager.setDelay(300);
 
     document.addEventListener("keydown", handleStart);
   </script>

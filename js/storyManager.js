@@ -30,6 +30,8 @@ const StoryManager = {
     const scene = await Loader.loadScene(sceneId);
     const art = scene.artId ? await Loader.loadArt(scene.artId) : null;
 
+    RenderManager.stop();
+
     this.renderScene(scene, art);
   },
 
@@ -40,7 +42,7 @@ const StoryManager = {
     textPanel.innerHTML = "";
     artPanel.textContent = "";
 
-    if (art) artPanel.textContent = art.lines.join("\n");
+    RenderManager.renderArt(art, artPanel);
 
     // Start typing text
     this.typeText(scene.text, textPanel, () => {
