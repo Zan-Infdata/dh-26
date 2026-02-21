@@ -89,7 +89,7 @@ const StoryManager = {
 
         setTimeout(() => {
           this.resolveChoice({ next: scene.nextId });
-        }, delay);
+        }, delay + 1000);
       }
 
     });

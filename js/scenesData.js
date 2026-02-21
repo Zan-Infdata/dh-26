@@ -177,7 +177,7 @@ const ScenesData = {
 
   "20": {
     "text": "Uncertainty should be quantified. ALWAYS!!! Remember that!\n",
-    "artId": "blinking",
+    "artId": "smiling",
     "choices": [
       { "text": "Ok boss", "next": "21" },
     ]
@@ -185,7 +185,7 @@ const ScenesData = {
   
   "21": {
     "text": "Anyway...\n",
-    "artId": "smiling",
+    "artId": "blinking",
     "nextId": "22",
     "timeout": 800,
   },
