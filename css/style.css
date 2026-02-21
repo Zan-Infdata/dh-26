@@ -84,8 +84,9 @@ body::before {
 }
 
 #text-panel {
+  border-top: 1px solid #444;
   flex: 1;
-  padding: 20px;
+  padding: 30px;
   overflow-y: auto;
   color: #00ff00;
 }

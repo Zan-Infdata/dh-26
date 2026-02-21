@@ -1,6 +1,7 @@
 const ScenesData = {
 
   "node1": {
+    "artId": "dolphin",
     "text": "Use the arrow keys to move betweet the answers and 'Enter' to select the answer. On mobile you can just press the answer\n",
     "choices": [
       { "text": "Proceed", "next": "node2" },
@@ -10,6 +11,7 @@ const ScenesData = {
 
   "node2": {
     "text": "Where do you want to start?\n",
+    "artId": "dolphin",
     "choices": [
       { "text": "Beginning", "next": "node3" },
       { "text": "Checkpoint 1 (Start of the quest)", "next": "12" }, 
@@ -1013,7 +1015,7 @@ const ScenesData = {
 },
 
 "86": {
-    "artId": "smiling",
+    "artId": "dolphin",
   "text": "Team SINJI DELFINI\n",
   "choices": [
     { "text": "Back to the begining", "next": "node2" },
@@ -1552,6 +1554,26 @@ const ArtData = {
 "                                                                                "
 ],
 
+]
+},
+"dolphin": {
+"lines": [
+[
+"                                   __                ",
+"                                _.-~  )              ",
+"                     _..--~~~~,'   ,-/     _         ",
+"                  .-'. . . .'   ,-','    ,' )        ",
+"                ,'. . . _   ,--~,-'__..-'  ,'        ",
+"              ,'. . .  (@)' ---~~~~      ,'          ",
+"             /. . . . '~~             ,-'            ",
+"            /. . . . .             ,-'               ",
+"           ; . . . .  - .        ,'                  ",
+"          : . . . .       _     /                    ",
+"         . . . . .          `-.:                     ",
+"        . . . ./  - .          )                     ",
+"       .  . . |  _____..---.._/ ____ Sinji Delfini _ ",
+" ~---~~~~----~~~~             ~~       ",
+],
 ]
 },
 "smiling": {
